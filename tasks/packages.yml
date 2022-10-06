@@ -1,0 +1,95 @@
+---
+- name: Remove GNOME Bloat
+  become: yes
+  package:
+    name: 
+      - gnome-maps
+      - gnome-boxes
+      - gnome-weather
+      - cheese
+    state: absent
+
+- name: Remove Rhythmbox
+  become: yes
+  package:
+    name: rhythmbox
+    state: absent
+    
+- name: Install Gimp and Inkscape
+  become: yes
+  package:
+    name: 
+      - gimp
+      - inkscape
+    state: present
+
+- name: Install qBittorrent
+  become: yes
+  package:
+    name: qbittorrent
+    state: present
+
+- name: Install scrcpy
+  become: yes
+  package: 
+    name: scrcpy
+    state: present
+  when: install_scrcpy
+
+- name: Install python-psutil
+become: yes
+  package:
+    name: python-psutil
+    state: present
+
+- name: Install neovim
+  become: yes
+  package:
+    name:
+      - neovim
+      - neovim-qt
+      - vim-enhanced
+    state: present
+
+- name: Install virtualization
+  become: yes
+  package:
+    name: @virtualization
+    state: present
+
+- name: Install extra packages
+  become: yes
+  package:
+    name:
+      - inotify-tools
+      - neofetch
+      - fuse-encfs
+      - qiv
+      - duperemove
+      - fdupes
+      - qt5-designer
+      - python3-ipython
+      - evemu
+      - sqlite
+      - libreoffice-draw
+      - net-tools
+      - pv 
+      - iotop-c
+      - adb
+      - gnome-sudoku
+      - xeyes
+      - stress-ng
+    state: present
+
+- name: Install multimedia
+  become: yes
+  package:
+    name:
+      - mplayer
+      - vlc
+      - unrar
+      - p7zip
+      - obs-studio
+      - ffmpeg
+    state: present
+  when: install_rpmfusion
