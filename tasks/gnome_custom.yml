@@ -1,5 +1,5 @@
 ---
 - name: Set allow volume above 100%
   dconf: 
-    key: "/org/gnome/desktop/sound/allow-volume-above-100-percent" 
-    value: true
+    key="/org/gnome/desktop/sound/allow-volume-above-100-percent" 
+    value=true

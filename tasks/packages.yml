@@ -34,10 +34,10 @@
   package: 
     name: scrcpy
     state: present
-  when: install_scrcpy
+  when: copr_scrcpy_installed.stat.exists
 
 - name: Install python-psutil
-become: yes
+  become: yes
   package:
     name: python-psutil
     state: present
@@ -54,7 +54,7 @@ become: yes
 - name: Install virtualization
   become: yes
   package:
-    name: @virtualization
+    name: "@virtualization"
     state: present
 
 - name: Install extra packages
@@ -92,4 +92,11 @@ become: yes
       - obs-studio
       - ffmpeg
     state: present
-  when: install_rpmfusion
+  when: rpmfusion_free_installed.stat.exists
+
+- name: Install unrar
+  become: yes
+  package:
+    name: unrar
+    state: present
+  when: rpmfusion_nonfree_installed.stat.exists
