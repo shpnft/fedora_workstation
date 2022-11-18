@@ -2,25 +2,38 @@
 - name: Remove GNOME Bloat
   become: yes
   package:
-    name: 
+    name:
       - gnome-maps
       - gnome-boxes
       - gnome-weather
       - cheese
+      - rhythmbox
     state: absent
 
-- name: Remove Rhythmbox
-  become: yes
-  package:
-    name: rhythmbox
-    state: absent
-    
 - name: Install Gimp and Inkscape
   become: yes
   package:
-    name: 
+    name:
       - gimp
       - inkscape
+    state: present
+
+- name: Install LaTeX
+  become: yes
+  package:
+    name:
+      - texlive-scheme-medium
+      - texlive-inconsolata
+      - zathura-pdf-poppler
+      - texlive-tkz-euclide
+      - texlive-tikz-3dplot
+      - texlive-tikzmark
+      - texlive-tikz-cd
+      - texlive-tikz-dimline
+      - texlive-tikzsymbols
+      - texlive-tikz-among-us
+      - texlive-tikzducks
+      - texlive-tikzposter
     state: present
 
 - name: Install qBittorrent
@@ -29,26 +42,41 @@
     name: qbittorrent
     state: present
 
-- name: Install scrcpy
-  become: yes
-  package: 
-    name: scrcpy
-    state: present
-  when: copr_scrcpy_installed.stat.exists
-
-- name: Install python-psutil
-  become: yes
-  package:
-    name: python-psutil
-    state: present
-
 - name: Install neovim
   become: yes
   package:
     name:
       - neovim
       - neovim-qt
-      - vim-enhanced
+      - python3-neovim
+    state: present
+
+- name: Install python packages
+  become: yes
+  package:
+    name:
+      - python3-ipython
+      - python3-scipy
+      - python3-sympy
+      - python3-toml
+      - black
+      - python3-matplotlib
+      - python3-qt5-base
+      - qt5-designer
+      - glade
+      - evemu
+      - sqlite
+      - xeyes
+      - gitui
+    state: present
+
+- name: Install pt_BR language support
+  become: yes
+  package:
+    name:
+      - langpacks-pt_BR
+      - libreoffice-langpack-pt-BR
+      - libreoffice-help-pt-BR
     state: present
 
 - name: Install virtualization
@@ -57,29 +85,53 @@
     name: "@virtualization"
     state: present
 
+- name: Install python-psutil
+  become: yes
+  package:
+    name: python-psutil
+    state: present
+
+- name: Install toolbox
+  become: yes
+  package:
+    name: toolbox
+    state: present
+
 - name: Install extra packages
   become: yes
   package:
     name:
+      - openssl
+      - fio
+      - gnome-backgrounds-extras
+      - secrets
+      - xournal
+      - gnome-sound-recorder
+      - qrencode
+      - freerdp
+      - gcc-c++
+      - libreoffice-draw
       - inotify-tools
       - neofetch
       - fuse-encfs
       - qiv
       - duperemove
       - fdupes
-      - qt5-designer
-      - python3-ipython
-      - evemu
-      - sqlite
-      - libreoffice-draw
       - net-tools
-      - pv 
+      - pv
       - iotop-c
       - adb
       - gnome-sudoku
-      - xeyes
       - stress-ng
+      - levien-inconsolata-fonts
     state: present
+
+- name: Install scrcpy
+  become: yes
+  package:
+    name: scrcpy
+    state: present
+  when: copr_scrcpy_installed.stat.exists
 
 - name: Install multimedia
   become: yes
@@ -87,10 +139,9 @@
     name:
       - mplayer
       - vlc
-      - unrar
+      - ffmpeg
       - p7zip
       - obs-studio
-      - ffmpeg
     state: present
   when: rpmfusion_free_installed.stat.exists
 
