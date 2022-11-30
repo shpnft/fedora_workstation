@@ -5,3 +5,4 @@
     - include_tasks: tasks/repositories.yml
     - include_tasks: tasks/packages.yml
     - include_tasks: tasks/gnome_custom.yml
+    - include_tasks: tasks/config_files.yml

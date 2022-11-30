@@ -1,0 +1,29 @@
+---
+- name: Copy Bash Customization file
+  copy:
+    src: config/bash/01-custom.sh
+    dest: ~/.bashrc.d/
+- name: Copy nvim init
+  copy:
+    src: config/nvim/init.vim
+    dest: ~/.config/nvim/
+- name: Copy nvim tex config
+  copy:
+    src: config/nvim/tex.lua
+    dest: ~/.config/nvim/after/ftplugin/
+- name: Copy tex snippets (1)
+  copy:
+    src: config/nvim/abr.snippets
+    dest: ~/.config/nvim/UltiSnips/tex/
+- name: Copy tex snippets (2)
+  copy:
+    src: config/nvim/env.snippets
+    dest: ~/.config/nvim/UltiSnips/tex/
+- name: Download vim-plug
+  ansible.builtin.get_url:
+    url: https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    dest: ~/.local/share/nvim/site/autoload/plug.vim
+- name: Copy latexmkrc
+  copy:
+    src: config/latexmk/latexmkrc
+    dest: ~/.latexmkrc
