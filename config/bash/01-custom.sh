@@ -1,16 +1,14 @@
-# Customization
+# https://askubuntu.com/a/681719
+# https://stackoverflow.com/a/32445282/20287521
+triangle=$'\uE0B0'
 
-# Define some colors first:
-black='\[\e[30m\]'
-red='\[\e[31m\]'
-green='\[\e[32m\]'
-yellow='\[\e[33m\]'
-blue='\[\e[34m\]'
-magenta='\[\e[35m\]'
-cyan='\[\e[36m\]'
-NC='\[\e[m\]'              # No Color
-
-PS1="${magenta}${PS1}${NC}"
+#[\u@\h \W]\$
+N=88
+PS1=""
+PS1="${PS1}\[\e[48;5;$((N+0))m\]\u\[\e[38;5;$((N+0))m\]\[\e[48;5;$((N+6))m\]${triangle}\[\e[0m\]"
+PS1="${PS1}\[\e[48;5;$((N+6))m\]\h\[\e[38;5;$((N+6))m\]\[\e[48;5;$((N+12))m\]${triangle}\[\e[0m\]"
+#https://unix.stackexchange.com/a/18986
+PS1="${PS1}\[\e[48;5;$((N+12))m\]\W\[\e[38;5;$((N+12))m\]\[\e[49m\]${triangle}\[\e[0m\]\$ "
 export PS1
 
 HISTFILESIZE=2000

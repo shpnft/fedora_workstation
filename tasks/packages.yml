@@ -34,6 +34,9 @@
       - texlive-tikz-among-us
       - texlive-tikzducks
       - texlive-tikzposter
+      - texlive-contour
+      - texlive-pgfornament
+      - texlive-augie
     state: present
 
 - name: Install qBittorrent
@@ -103,6 +106,8 @@
     name:
       - openssl
       - smartmontools
+      - gstreamer1-plugin-openh264
+      - fira-code-fonts
       - task
       - fio
       - gnome-backgrounds-extras
