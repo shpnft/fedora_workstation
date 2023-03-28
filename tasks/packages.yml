@@ -36,6 +36,7 @@
       - texlive-tikzposter
       - texlive-contour
       - texlive-pgfornament
+      - texlive-qrcode
       - texlive-augie
     state: present
 
