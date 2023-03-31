@@ -21,6 +21,7 @@ call plug#begin()
         let g:UltiSnipsExpandTrigger = '<tab>'
         let g:UltiSnipsJumpForwardTrigger = '<tab>'
         let g:UltiSnipsJumpBackwardTrigger = '<S-Tab>'
+        let g:UltiSnipsEditSplit='horizontal'
 
         Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 

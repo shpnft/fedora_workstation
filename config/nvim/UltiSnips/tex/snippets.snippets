@@ -1,0 +1,76 @@
+snippet "\\?beg(in)?([a-z]+)?" "begin / end" br
+\begin{${1:`!p
+a={"f": "frame", "i": "itemize", "e": "enumerate", "t": "tikzpicture"}
+a["c"]="center"
+a["m"]="minipage"
+try:
+	snip.rv = a[match.group(2)]
+except KeyError:
+	snip.rv = "something"
+`}}${0}
+\end{$1}
+endsnippet
+
+snippet bf "bold text"
+\textbf{${1:${VISUAL}}}$0
+endsnippet
+
+snippet it "italic text"
+\textit{${1:${VISUAL}}}$0
+endsnippet
+
+snippet un "underline text"
+\underline{${1:${VISUAL}}}$0
+endsnippet
+
+snippet mm "\( 1 \)"
+\(${1:${VISUAL}}\)$0
+endsnippet
+
+snippet lr "left right"
+\left${1} ${0:${VISUAL}} \right$1
+endsnippet
+
+snippet \. "cdot"
+\cdot
+endsnippet
+
+snippet \... "ldot"
+\ldots
+endsnippet
+
+snippet \* "times"
+\times
+endsnippet
+
+snippet \a "alpha" i
+\alpha
+endsnippet
+
+snippet \b "beta" i
+\beta
+endsnippet
+
+snippet \d "delta" i
+\delta
+endsnippet
+
+snippet \o "theta" i
+\theta
+endsnippet
+
+snippet \w "omega" i
+\omega
+endsnippet
+
+snippet "([\-0-9.,e]+) ([^ ]+)si" "\SI{1}{2}" rw
+\SI{`!p snip.rv=match.group(1)`}{`!p snip.rv=match.group(2)`}
+endsnippet
+
+snippet "(\w+)v" "vec{}" rw
+\vec{`!p snip.rv=match.group(1)`}
+endsnippet
+
+snippet \coordinate "\coordinate" b
+\coordinate (${1:nome}) at (${2:posição});$0
+endsnippet

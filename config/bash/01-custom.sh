@@ -3,7 +3,11 @@
 triangle=$'\uE0B0'
 
 #[\u@\h \W]\$
-N=88
+if [ -f /run/.containerenv ] && [ -f /run/.toolboxenv ]; then
+        N=90
+else
+        N=55
+fi
 PS1=""
 PS1="${PS1}\[\e[48;5;$((N+0))m\]\u\[\e[38;5;$((N+0))m\]\[\e[48;5;$((N+6))m\]${triangle}\[\e[0m\]"
 PS1="${PS1}\[\e[48;5;$((N+6))m\]\h\[\e[38;5;$((N+6))m\]\[\e[48;5;$((N+12))m\]${triangle}\[\e[0m\]"
