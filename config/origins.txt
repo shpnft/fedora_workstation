@@ -1,0 +1,5 @@
+bash/01-custom.sh /home/shpnft/.bashrc.d/01-custom.sh
+latexmk/latexmkrc /home/shpnft/.latexmkrc
+nvim/init.vim /home/shpnft/.config/nvim/init.vim
+nvim/tex.vim /home/shpnft/.config/nvim/after/ftplugin/tex.vim
+nvim/UltiSnips/tex/snippets.snippets /home/shpnft/.config/nvim/UltiSnips/tex/snippets.snippets
