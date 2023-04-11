@@ -118,6 +118,8 @@
       - qrencode
       - freerdp
       - gcc-c++
+      - clang
+      - clang-tools-extra
       - libreoffice-draw
       - inotify-tools
       - neofetch
