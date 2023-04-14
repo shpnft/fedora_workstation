@@ -38,6 +38,7 @@
       - texlive-pgfornament
       - texlive-qrcode
       - texlive-augie
+      - wl-clipboard
     state: present
 
 - name: Install qBittorrent
