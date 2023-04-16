@@ -24,7 +24,6 @@
     name:
       - texlive-scheme-medium
       - texlive-inconsolata
-      - zathura-pdf-poppler
       - texlive-tkz-euclide
       - texlive-tikz-3dplot
       - texlive-tikzmark

@@ -15,7 +15,7 @@ set colorcolumn=80,120
 call plug#begin()
         " Make sure you use single quotes
         Plug 'lervag/vimtex'
-        let g:vimtex_view_method='zathura'
+        let g:vimtex_view_method='mupdf'
 
         Plug 'sirver/ultisnips'
         let g:UltiSnipsExpandTrigger = '<tab>'
