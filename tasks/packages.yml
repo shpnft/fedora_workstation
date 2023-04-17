@@ -59,6 +59,8 @@
       - neovim
       - neovim-qt
       - python3-neovim
+      - mupdf
+      - xdotool
     state: present
 
 - name: Install python packages
