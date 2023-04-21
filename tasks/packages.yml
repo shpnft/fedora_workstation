@@ -40,17 +40,12 @@
       - wl-clipboard
       - veusz
     state: present
-    tags:
-      - latex
 
 - name: Install qBittorrent
   become: yes
   package:
     name: qbittorrent
     state: present
-    tags:
-      - torrent
-
 
 - name: Install neovim
   become: yes
@@ -59,8 +54,6 @@
       - neovim
       - neovim-qt
       - python3-neovim
-      - mupdf
-      - xdotool
     state: present
 
 - name: Install python packages
@@ -96,8 +89,6 @@
   package:
     name: "@virtualization"
     state: present
-    tags:
-      - virtualization
 
 - name: Install python-psutil
   become: yes

@@ -1,5 +1,2 @@
 $pdf_mode = 1;
-# https://tex.stackexchange.com/a/655298
-$pdf_previewer = 'zathura';
-# https://tex.stackexchange.com/a/498358
 $clean_ext = "synctex.gz nav snm thm soc loc glg acn";
