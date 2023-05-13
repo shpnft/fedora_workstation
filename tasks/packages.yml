@@ -64,11 +64,12 @@
       - python3-scipy
       - python3-sympy
       - python3-toml
-      - black
       - python3-matplotlib
       - python3-qt5-base
+      - python3-opencv
       - qt5-designer
       - glade
+      - black
       - evemu
       - sqlite
       - xeyes
