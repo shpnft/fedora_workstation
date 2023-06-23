@@ -38,7 +38,6 @@
       - texlive-qrcode
       - texlive-augie
       - wl-clipboard
-      - veusz
     state: present
 
 - name: Install qBittorrent
@@ -73,7 +72,6 @@
       - evemu
       - sqlite
       - xeyes
-      - gitui
     state: present
 
 - name: Install pt_BR language support
