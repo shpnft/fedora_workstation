@@ -89,4 +89,6 @@
       - adb
       - levien-inconsolata-fonts
       - glib2-devel
+      - aria2c
+      - libwebp-tools
     state: present
