@@ -22,6 +22,7 @@
       - texlive-tikz-among-us
       - texlive-tikzducks
       - texlive-tikzposter
+      - texlive-circuitikz
       - texlive-contour
       - texlive-pgfornament
       - texlive-qrcode
