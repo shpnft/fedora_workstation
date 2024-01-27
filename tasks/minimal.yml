@@ -27,6 +27,7 @@
       - texlive-qrcode
       - texlive-augie
       - drawing
+      - pandoc
     state: present
 
 - name: Install neovim
