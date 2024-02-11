@@ -27,6 +27,8 @@
       - texlive-pgfornament
       - texlive-qrcode
       - texlive-augie
+      - texlive-tikzfill
+      - texlive-listingsutf8
       - drawing
       - pandoc
     state: present
