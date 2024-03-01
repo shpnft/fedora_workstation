@@ -15,9 +15,7 @@ set colorcolumn=80,120
 call plug#begin()
         " Make sure you use single quotes
         Plug 'lervag/vimtex'
-        " let g:vimtex_view_method='mupdf'
-        let g:vimtex_indent_on_ampersands = 0
-        let g:vimtex_indent_tikz_commands = 0
+        let g:vimtex_indent_enabled = 0
 
         Plug 'sirver/ultisnips'
         let g:UltiSnipsExpandTrigger = '<tab>'

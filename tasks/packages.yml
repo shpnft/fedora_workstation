@@ -1,163 +1,70 @@
 ---
-- name: Remove GNOME Bloat
-  become: yes
-  package:
-    name:
-      - gnome-maps
-      - gnome-boxes
-      - gnome-weather
-      - cheese
-      - rhythmbox
-    state: absent
-
-- name: Install Gimp and Inkscape
+- name: Install packages
   become: yes
   package:
     name:
       - gimp
-      - inkscape
-    state: present
-
-- name: Install LaTeX
-  become: yes
-  package:
-    name:
+      - drawing
       - texlive-scheme-medium
       - texlive-inconsolata
-      - texlive-tkz-euclide
-      - texlive-tikz-3dplot
+      # - texlive-tkz-euclide
+      # - texlive-tikz-3dplot
       - texlive-tikzmark
-      - texlive-tikz-cd
+      # - texlive-tikz-cd
       - texlive-tikz-dimline
       - texlive-tikzsymbols
-      - texlive-tikz-among-us
-      - texlive-tikzducks
-      - texlive-tikzposter
-      - texlive-contour
-      - texlive-pgfornament
+      # - texlive-tikz-among-us
+      # - texlive-tikzducks
+      # - texlive-tikzposter
+      # - texlive-circuitikz
+      # - texlive-contour
+      # - texlive-pgfornament
       - texlive-qrcode
       - texlive-augie
-      - wl-clipboard
-    state: present
-
-- name: Install qBittorrent
-  become: yes
-  package:
-    name: qbittorrent
-    state: present
-
-- name: Install neovim
-  become: yes
-  package:
-    name:
+      - texlive-tikzfill
+      - texlive-listingsutf8
+      - libwebp-tools
+      - pandoc
       - neovim
-      - neovim-qt
+      - levien-inconsolata-fonts
       - python3-neovim
-    state: present
-
-- name: Install python packages
-  become: yes
-  package:
-    name:
       - python3-ipython
+      - python3-numpy
       - python3-scipy
       - python3-sympy
-      - python3-toml
       - python3-matplotlib
-      - python3-qt5-base
       - python3-opencv
-      - qt5-designer
-      - glade
-      - black
-      - evemu
       - sqlite
       - xeyes
-    state: present
-
-- name: Install pt_BR language support
-  become: yes
-  package:
-    name:
       - langpacks-pt_BR
       - libreoffice-langpack-pt-BR
       - libreoffice-help-pt-BR
-    state: present
-
-- name: Install virtualization
-  become: yes
-  package:
-    name: "@virtualization"
-    state: present
-
-- name: Install python-psutil
-  become: yes
-  package:
-    name: python-psutil
-    state: present
-
-- name: Install toolbox
-  become: yes
-  package:
-    name: toolbox
-    state: present
-
-- name: Install extra packages
-  become: yes
-  package:
-    name:
       - openssl
+      - zstd
       - smartmontools
-      - gstreamer1-plugin-openh264
       - fira-code-fonts
-      - task
-      - fio
-      - gnome-backgrounds-extras
       - secrets
       - xournal
-      - gnome-sound-recorder
       - qrencode
-      - freerdp
       - gcc-c++
-      - clang
       - clang-tools-extra
-      - libreoffice-draw
-      - inotify-tools
+      - clang
       - neofetch
       - fuse-encfs
-      - qiv
       - duperemove
       - fdupes
-      - net-tools
+      # - net-tools
       - pv
       - iotop-c
       - adb
+      - aria2c
+      - libwebp-tools
+      - fio
       - gnome-sudoku
-      - stress-ng
-      - levien-inconsolata-fonts
-    state: present
-
-- name: Install scrcpy
-  become: yes
-  package:
-    name: scrcpy
-    state: present
-  when: copr_scrcpy_installed.stat.exists
-
-- name: Install multimedia
-  become: yes
-  package:
-    name:
-      - mplayer
-      - vlc
-      - ffmpeg
       - p7zip
+      - unrar
+      - aria2c
+      - ffmpeg-free
       - obs-studio
+      - qiv
     state: present
-  when: rpmfusion_free_installed.stat.exists
-
-- name: Install unrar
-  become: yes
-  package:
-    name: unrar
-    state: present
-  when: rpmfusion_nonfree_installed.stat.exists
