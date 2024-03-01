@@ -57,7 +57,7 @@
       - pv
       - iotop-c
       - adb
-      - aria2c
+      - aria2
       - libwebp-tools
       - fio
       - gnome-sudoku
