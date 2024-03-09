@@ -66,4 +66,5 @@
       - ffmpeg-free
       - obs-studio
       - qiv
+      - makepasswd
     state: present
