@@ -23,7 +23,7 @@ call plug#begin()
         let g:UltiSnipsJumpBackwardTrigger = '<S-Tab>'
         let g:UltiSnipsEditSplit='horizontal'
 
-        Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
+        Plug 'rebelot/kanagawa.nvim'
 
         Plug 'vim-airline/vim-airline'
         let g:airline_symbols_ascii = 1
@@ -32,4 +32,4 @@ call plug#begin()
 
 call plug#end()
 
-colorscheme tokyonight-night
+colorscheme kanagawa

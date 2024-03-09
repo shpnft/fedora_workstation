@@ -64,7 +64,7 @@ snippet \w "omega" i
 endsnippet
 
 snippet "([\-0-9.,e]+) ([^ ]+)si" "\SI{1}{2}" rw
-\SI{`!p snip.rv=match.group(1)`}{`!p snip.rv=match.group(2)`}
+\SI{`!p snip.rv=match.group(1).replace(",",".")`}{`!p snip.rv=match.group(2)`}
 endsnippet
 
 snippet "(\w+)v" "vec{}" rw
