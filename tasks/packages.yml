@@ -58,7 +58,6 @@
       - iotop-c
       - adb
       - aria2
-      - libwebp-tools
       - fio
       - gnome-sudoku
       - p7zip
