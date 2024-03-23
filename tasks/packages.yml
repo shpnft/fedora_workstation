@@ -66,4 +66,6 @@
       - obs-studio
       - qiv
       - makepasswd
+      - gstreamer1-plugin-openh264
+      # - openh264
     state: present
