@@ -23,6 +23,7 @@
       - texlive-augie
       - texlive-tikzfill
       - texlive-listingsutf8
+      - texlive-beamertheme-tcolorbox
       - libwebp-tools
       - pandoc
       - neovim
